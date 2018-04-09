@@ -1,4 +1,4 @@
-n = int(input( "Digite um número inteiro paar fatoração em primos:"))
+n = int(input( "Digite um número inteiro para ser fatorado em primos:"))
 
 prime = 2
 prime_list = []
