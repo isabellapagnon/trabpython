@@ -1,29 +1,36 @@
-"""
-Spyder Editor
+n = int(input( "Digite um número inteiro paar fatoração em primos:"))
 
-This is a temporary script file.
-"""
+prime = 2
+prime_list = []
 
-print(1)
-
-numero = input("Digite um numero inteiro para ser fatorado:")
-numero = int(numero)
-#8print(type(numero))
-i = [2,3,5,7,11,13,17,19,23,27,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]
-result = []
-div = numero
-
-
-
-while(div > 1):
+while prime < n:
+    number = 2
+    is_prime = True
+    while number < prime and is_prime:
+        if number != 1:
+            if prime % number == 0:
+                is_prime = False
+            else:
+                number+=1
+    if is_prime:
+            prime_list.append(prime)
+    prime+=1
     
-    for number in i:
-        print(div%number, div, number)
-        if (div % number == 0):
-            div = div/number
-            result.append(number)
+    
+print(prime_list)
+    
+
+factor = []
+division = n
+while(division > 1):
+    for n in prime_list:
+        if(division % n == 0):
+            division = division/n
+            factor.append(n)
             break
-        
+
+factor.append(1)
+print("os fatores primos são:",factor)
 
 print(result)
 
