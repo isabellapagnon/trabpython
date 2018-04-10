@@ -32,9 +32,4 @@ while(division > 1):
 factor.append(1)
 print("os fatores primos são:",factor)
 
-print(result)
-
-primes = [i]
-print = i
-primes.append(i)
 
